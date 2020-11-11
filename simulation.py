@@ -28,7 +28,9 @@ class HeatExchangeSimulation:
         self._dt = dt
         self._h = h if callable(h) else (lambda dT: h)
 
-        self._history = []
+        self._history = [
+            (self.t, self.Tb, self.Tw, self.h)
+        ]
 
     def step(self, dt=None):
         """ Calculates next step of the simulation. """
