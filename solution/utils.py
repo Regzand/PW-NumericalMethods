@@ -1,6 +1,6 @@
 import numpy as np
 
-from integrals import simpson_integral
+from solution.integrals import simpson_integral
 
 
 def tabularize(f, start, stop, samples):
